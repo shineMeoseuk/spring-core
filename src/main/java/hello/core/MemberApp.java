@@ -12,7 +12,7 @@ public class MemberApp {
 //        Appconfig appconfig = new Appconfig();
 //        MemberService memberService = appconfig.memberService();
 
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Appconfig.class);
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
 
         Member member = new Member(1L, "memberA", Grade.VIP);
